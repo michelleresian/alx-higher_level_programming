@@ -3,12 +3,12 @@ import sys
 
 
 def main():
-    args = sys.argv[1:]  # Exclude the script name from the arguments
+    args = sys.argv[1:]
     num_args = len(args)
 
     print(f"{num_args}", end=' ')
     if num_args == 0:
-        print(".", end='\n\n')
+        print("arguments.", end='\n')
     elif num_args == 1:
         print("argument:", end='\n')
         print(f"{num_args}:", args[0])
@@ -22,4 +22,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-    
