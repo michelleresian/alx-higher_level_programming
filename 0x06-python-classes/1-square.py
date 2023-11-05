@@ -1,10 +1,9 @@
 #!/usr/bin/python3
-"""Square class"""
+"""A module to export a square with size private attribute"""
 
 
 class Square:
-    """Define square class"""
+    """A blue print for a square"""
 
-    def __init__(self, size):
-        """Initialize class"""
-        self.size = size
+    def __init__(self, number):
+        self.__size = number
