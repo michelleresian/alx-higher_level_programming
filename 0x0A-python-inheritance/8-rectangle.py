@@ -1,32 +1,14 @@
 #!/usr/bin/python3
-"""A module for a class that calculate the Geometry of an object"""
-
-
-class BaseGeometry:
-    """A class to calculate the Geometry"""
-
-    def area(self):
-        """A function to raise error message"""
-        raise Exception("area() is not implemented")
-
-    def integer_validator(self, name, value):
-        """A public method to validate the value"""
-        if (type(value) != int):
-            raise TypeError("{:s} must be an integer".format(name))
-        if (value <= 0):
-            raise ValueError("{:s} must be greater than 0".format(name))
+"""class that inherits from BaseGeometry class"""
+BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
 
 class Rectangle(BaseGeometry):
-    """
-    A rectangle that inherits from BaseGeometry class (being a subclass to it and inherits all attributes)
-    """
+    """Rectangle Class inheriting form the base geometry class."""
 
     def __init__(self, width, height):
-        """
-        initiate inherited attributes and validate it
-        """
-        self.integer_validator("width", width)
-        self.integer_validator("height", height)
-        self._width = width
-        self._height = height
+        """class instatiation with width and height"""
+        super().integer_validator("width", width)
+        super().integer_validator("height", height)
+        self.__width = width
+        self.__height = height
